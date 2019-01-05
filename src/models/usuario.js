@@ -21,7 +21,7 @@ const schema = new Schema({
     status: {
         type: String,
         required: true,
-        enum: ['Pendente', 'Ativo', 'Suspendo', 'Inativo'],
+        enum: ['Pendente', 'Ativo', 'Suspendo', 'Ferias', 'Inativo'],
         default: 'Pendente'
     }
 });
