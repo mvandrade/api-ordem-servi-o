@@ -1,0 +1,27 @@
+{
+  "name": "api-ordem_servico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "guid": "0.0.12",
+    "http": "0.0.0",
+    "jsonwebtoken": "^8.4.0",
+    "md5": "^2.2.1",
+    "mongoose": "^5.3.16",
+    "mysql": "^2.16.0",
+    "sequelize": "^4.42.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^5.4.0"
+  }
+}
