@@ -15,6 +15,17 @@ exports.get = async(req, res, next) => {
     }
 }
 
+exports.getById = async(req, res, next) => {
+    try{
+        var data = await repository.getById(req.params.id)
+        res.status(200).send({ data});
+    } catch(e) {
+        res.status(500).send({
+            message: 'Falha no processamento da requisição'
+        });
+    }
+}
+
 exports.post = async(req, res, next) => {
     let contract = new ValidationContract();
     contract.isRequired(req.body.nome, 'Preenchimento obrigatório do nome');

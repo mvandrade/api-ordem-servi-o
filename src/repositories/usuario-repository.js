@@ -8,6 +8,11 @@ exports.get = async() => {
     return res;
 }
 
+exports.getById = async(id) => {
+    const res = await Usuario.findById(id);
+    return res;
+}
+
 exports.create = async(data) => {
     var usuario = new Usuario(data);
     const res = await usuario.save();
@@ -20,7 +25,8 @@ exports.update = async(id, data) => {
         $set: {
             name: data.name,
             email: data.email,
-            password: data.password
+            password: data.password,
+            updatedDate: Date.now
         }
     });
     return res;

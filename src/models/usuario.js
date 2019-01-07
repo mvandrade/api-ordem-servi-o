@@ -23,7 +23,19 @@ const schema = new Schema({
         required: true,
         enum: ['Pendente', 'Ativo', 'Suspendo', 'Inativo'],
         default: 'Pendente'
-    }
+    },
+    createdDate: {
+        type: Date,
+        required: true,
+        default: Date.now
+    },
+    updatedDate: {
+        type: Date,
+        required: true,
+        default: Date.now
+    },
 });
+
+schema.set('toJSON', { virtuals: true });
 
 module.exports = mongoose.model('Usuario', schema);
